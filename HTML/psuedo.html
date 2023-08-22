@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      .button::before {
+        content: "►";
+
+        font-size: 20px;
+
+        margin-right: 5px;
+      }
+
+      .tooltip::after {
+        content: attr(data-tooltip);
+
+        background-color: #000;
+
+        color: #fff;
+
+        padding: 5px 10px;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+
+      p::first-line {
+        font-weight: bold;
+
+        color: blue;
+      }
+
+      ::selection {
+        background-color: yellow;
+
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="button">Click</button>
+
+    <div class="tooltip" data-tooltip="This is a tooltip">Hover over me</div>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis
+      eget arcu id convallis.
+    </p>
+
+    <p>Select this text to see the ::selection pseudo-element in action.</p>
+  </body>
+</html>

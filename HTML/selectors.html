@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      div,
+      p {
+        color: blue;
+      }
+
+      div p {
+        font-weight: bold;
+      }
+
+      div ~ p {
+        background-color: yellow;
+      }
+
+      div + p {
+        font-style: italic;
+      }
+
+      div > p {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>This is a paragraph.</p>
+
+      <p>This is another paragraph.</p>
+    </div>
+
+    <p>This is a stand-alone paragraph.</p>
+
+    <div>
+      <span>Not selected</span>
+
+      <p>This paragraph is selected.</p>
+
+      <p>This paragraph is also selected.</p>
+    </div>
+  </body>
+</html>

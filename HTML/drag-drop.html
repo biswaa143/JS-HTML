@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      .drag-image {
+        width: 200px;
+      }
+
+      .drop-area {
+        width: 400px;
+
+        height: 400px;
+
+        border: 2px dashed #000;
+      }
+    </style>
+
+    <script>
+      function handleDragStart(event) {
+        event.dataTransfer.setData("text/plain", event.target.id);
+      }
+
+      function handleDragOver(event) {
+        event.preventDefault();
+      }
+
+      function handleDrop(event) {
+        event.preventDefault();
+
+        const data = event.dataTransfer.getData("text/plain");
+
+        const draggedElement = document.getElementById(data);
+
+        event.target.appendChild(draggedElement);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div
+      class="drop-area"
+      ondragover="handleDragOver(event)"
+      ondrop="handleDrop(event)"
+    >
+      <!-- Placeholder text to represent drop area -->
+
+      Drop Here
+    </div>
+
+    <img
+      id="myImage"
+      class="drag-image"
+      src="https://www.copahost.com/blog/wp-content/uploads/2019/07/imgsize2.png"
+      draggable="true"
+      ondragstart="handleDragStart(event)"
+    />
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      #my-element {
+        width: 300px;
+
+        height: 100px;
+
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="my-element"></div>
+
+    <script>
+      const element = document.getElementById("my-element");
+
+      const shadowRoot = element.attachShadow({ mode: "open" });
+
+      const style = document.createElement("style");
+
+      style.textContent = `
+
+      .message {
+
+        color: blue;
+
+        font-weight: bold;
+
+      }
+
+    `;
+
+      const content = document.createElement("div");
+
+      content.className = "message";
+
+      content.textContent = "Hello, Shadow DOM!";
+
+      shadowRoot.appendChild(style);
+
+      shadowRoot.appendChild(content);
+    </script>
+  </body>
+</html>

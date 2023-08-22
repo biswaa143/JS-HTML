@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Examples</title>
+    <style>
+      /* Block-level element */
+      .block-element {
+        display: block;
+        background-color: #ffcc00;
+        margin-bottom: 10px;
+      }
+
+      /* Inline element */
+      .inline-element {
+        display: inline;
+        background-color: #33cc33;
+        margin-right: 10px;
+      }
+
+      /* Inline-block element */
+      .inline-block-element {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: #3399ff;
+        margin-right: 10px;
+      }
+
+      /* Hidden element */
+      .hidden-element {
+        display: none;
+      }
+
+      /* Flex container */
+      .flex-container {
+        display: flex;
+        background-color: #ff66cc;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      /* Grid container */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 10px;
+        background-color: #cc66ff;
+        margin-bottom: 10px;
+      }
+
+      /* Table container */
+      .table-container {
+        display: table;
+        background-color: #99ff66;
+        margin-bottom: 10px;
+      }
+
+      /* List item */
+      .list-item {
+        display: list-item;
+        background-color: #ff9933;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Block-level element -->
+    <div class="block-element">
+      This is a block-level element. It starts on a new line and takes up the
+      full width.
+    </div>
+
+    <!-- Inline elements -->
+    <span class="inline-element">Inline</span>
+    <span class="inline-element">elements</span>
+    <span class="inline-element">are</span>
+    <span class="inline-element">rendered</span>
+    <span class="inline-element">inline.</span>
+
+    <!-- Inline-block element -->
+    <div class="inline-block-element">
+      Inline-block elements behave like inline but can have width and height.
+    </div>
+
+    <!-- Hidden element -->
+    <p>This is a visible paragraph.</p>
+    <p class="hidden-element">This paragraph is hidden with display: none;</p>
+    <p>This is another visible paragraph.</p>
+
+    <!-- Flex container -->
+    <div class="flex-container">
+      <div>Flex item 1</div>
+      <div>Flex item 2</div>
+      <div>Flex item 3</div>
+    </div>
+
+    <!-- Grid container -->
+    <div class="grid-container">
+      <div>Grid item 1</div>
+      <div>Grid item 2</div>
+      <div>Grid item 3</div>
+    </div>
+
+    <!-- Table container -->
+    <div class="table-container">
+      <div>Table cell 1</div>
+      <div>Table cell 2</div>
+      <div>Table cell 3</div>
+    </div>
+
+    <!-- List item -->
+    <ul>
+      <li class="list-item">List item 1</li>
+      <li class="list-item">List item 2</li>
+      <li class="list-item">List item 3</li>
+    </ul>
+
+    <!--Audio & Video support-->
+    <audio
+      src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+      controls
+    >
+      Your browser does not support the audio element.
+    </audio>
+
+    <video
+      src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      controls
+    >
+      Your browser does not support the video element.
+    </video>
+
+    <article>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ex,
+      laudantium ab sunt voluptatem dicta quia ipsum labore nisi omnis,
+      provident officiis nobis delectus laborum mollitia excepturi officia a at.
+    </article>
+  </body>
+</html>

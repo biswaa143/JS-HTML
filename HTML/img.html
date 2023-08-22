@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Example</title>
+  <style>
+    /* Approach 1: Using CSS with Max-Width */
+    .img-container {
+      max-width: 100%;
+    }
+
+    /* Approach 2: Using CSS with Background Image */
+    .bg-image {
+      background-image: url("image.jpg");
+      background-size: cover;
+      background-position: center;
+      width: 600px;
+      height: 2000px; /* Set an appropriate height for the container */
+    }
+
+    /* Approach 3: Using CSS Media Queries */
+    @media (min-width: 768px) {
+      .img-container {
+        max-width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Approach 1: Using CSS with Max-Width -->
+  <div class="img-container">
+    <img src="image.jpg" alt="Responsive Image">
+  </div>
+
+  <!-- Approach 2: Using CSS with Background Image -->
+  <div class="bg-image"></div>
+
+  <!-- Approach 3: Using CSS Media Queries -->
+  <div class="img-container">
+    <img src="image.jpg" alt="Responsive Image">
+  </div>
+</body>
+</html>
